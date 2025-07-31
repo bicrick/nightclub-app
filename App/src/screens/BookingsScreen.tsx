@@ -9,25 +9,38 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { ComponentProps } from '../types';
+import { useNavigation } from '@react-navigation/native';
 import { colors } from '../styles/colors';
 import { spacing } from '../styles/spacing';
 import { typography } from '../styles/typography';
 import { BookingCard } from '../components/booking/BookingCard';
+import { InvitationCard } from '../components/invitation/InvitationCard';
 import { 
   mockBookings, 
   getUpcomingBookings, 
   getPastBookings,
   DetailedBooking 
 } from '../utils/mockBookingData';
+import { 
+  mockInvitations,
+  getReceivedInvitations,
+  getSentInvitations,
+  getPendingInvitations,
+  Invitation
+} from '../utils/mockInvitationData';
 
 interface Props extends ComponentProps {}
 
 export const BookingsScreen: React.FC<Props> = () => {
+  const navigation = useNavigation();
   const [refreshing, setRefreshing] = useState(false);
-  const [activeTab, setActiveTab] = useState<'upcoming' | 'past'>('upcoming');
+  const [activeTab, setActiveTab] = useState<'upcoming' | 'invitations' | 'past'>('upcoming');
 
   const upcomingBookings = getUpcomingBookings();
   const pastBookings = getPastBookings();
+  const receivedInvitations = getReceivedInvitations();
+  const sentInvitations = getSentInvitations();
+  const allInvitations = [...receivedInvitations, ...sentInvitations];
 
   const onRefresh = React.useCallback(() => {
     setRefreshing(true);
@@ -57,28 +70,66 @@ export const BookingsScreen: React.FC<Props> = () => {
     // TODO: Implement cancel booking functionality
   };
 
-  const EmptyState: React.FC<{ type: 'upcoming' | 'past' }> = ({ type }) => (
+  const handleInvitationPress = (invitation: Invitation) => {
+    console.log('View invitation details:', invitation.id);
+    // TODO: Navigate to invitation detail screen
+  };
+
+  const handleAcceptInvitation = (invitation: Invitation) => {
+    console.log('Accept invitation:', invitation.id);
+    // TODO: Implement accept invitation functionality
+  };
+
+  const handleDeclineInvitation = (invitation: Invitation) => {
+    console.log('Decline invitation:', invitation.id);
+    // TODO: Implement decline invitation functionality
+  };
+
+  const handleMaybeInvitation = (invitation: Invitation) => {
+    console.log('Maybe invitation:', invitation.id);
+    // TODO: Implement maybe invitation functionality
+  };
+
+  const handleFabPress = () => {
+    if (activeTab === 'invitations') {
+      // Navigate to Friends screen
+      (navigation as any).navigate('Friends');
+    } else {
+      // Navigate to Venues for upcoming bookings
+      (navigation as any).navigate('Venues');
+    }
+  };
+
+  const EmptyState: React.FC<{ type: 'upcoming' | 'past' | 'invitations' }> = ({ type }) => (
     <View style={styles.emptyState}>
       <View style={styles.emptyIconContainer}>
         <Ionicons 
-          name={type === 'upcoming' ? 'calendar-outline' : 'time-outline'} 
+          name={
+            type === 'upcoming' ? 'calendar-outline' : 
+            type === 'invitations' ? 'mail-outline' : 'time-outline'
+          } 
           size={64} 
           color={colors.textMuted} 
         />
       </View>
       <Text style={styles.emptyTitle}>
-        {type === 'upcoming' ? 'No Upcoming Bookings' : 'No Past Bookings'}
+        {type === 'upcoming' ? 'No Upcoming Bookings' : 
+         type === 'invitations' ? 'No Invitations' : 'No Past Bookings'}
       </Text>
       <Text style={styles.emptyDescription}>
         {type === 'upcoming' 
           ? 'Ready to plan your next night out? Find the perfect venue and book your table.'
+          : type === 'invitations'
+          ? 'When friends invite you to events, they\'ll appear here. Start connecting with friends!'
           : 'Your booking history will appear here once you start making reservations.'
         }
       </Text>
-      {type === 'upcoming' && (
+      {(type === 'upcoming' || type === 'invitations') && (
         <Pressable style={styles.emptyActionButton}>
           <Ionicons name="add" size={20} color={colors.text} />
-          <Text style={styles.emptyActionText}>Find Venues</Text>
+          <Text style={styles.emptyActionText}>
+            {type === 'invitations' ? 'Find Friends' : 'Find Venues'}
+          </Text>
         </Pressable>
       )}
     </View>
@@ -99,48 +150,68 @@ export const BookingsScreen: React.FC<Props> = () => {
         </View>
       </View>
 
-      {/* Tab Navigation */}
-      <View style={styles.tabContainer}>
-        <Pressable 
-          style={[
-            styles.tab,
-            activeTab === 'upcoming' && styles.activeTab
-          ]}
-          onPress={() => setActiveTab('upcoming')}
-        >
-          <Text style={[
-            styles.tabText,
-            activeTab === 'upcoming' && styles.activeTabText
-          ]}>
-            Upcoming
-          </Text>
-          {upcomingBookings.length > 0 && (
-            <View style={styles.tabBadge}>
-              <Text style={styles.tabBadgeText}>{upcomingBookings.length}</Text>
-            </View>
-          )}
-        </Pressable>
+                {/* Tab Navigation */}
+          <View style={styles.tabContainer}>
+            <Pressable 
+              style={[
+                styles.tab,
+                activeTab === 'upcoming' && styles.activeTab
+              ]}
+              onPress={() => setActiveTab('upcoming')}
+            >
+              <Text style={[
+                styles.tabText,
+                activeTab === 'upcoming' && styles.activeTabText
+              ]}>
+                Upcoming
+              </Text>
+              {upcomingBookings.length > 0 && (
+                <View style={styles.tabBadge}>
+                  <Text style={styles.tabBadgeText}>{upcomingBookings.length}</Text>
+                </View>
+              )}
+            </Pressable>
 
-        <Pressable 
-          style={[
-            styles.tab,
-            activeTab === 'past' && styles.activeTab
-          ]}
-          onPress={() => setActiveTab('past')}
-        >
-          <Text style={[
-            styles.tabText,
-            activeTab === 'past' && styles.activeTabText
-          ]}>
-            Past
-          </Text>
-          {pastBookings.length > 0 && (
-            <View style={styles.tabBadge}>
-              <Text style={styles.tabBadgeText}>{pastBookings.length}</Text>
-            </View>
-          )}
-        </Pressable>
-      </View>
+            <Pressable 
+              style={[
+                styles.tab,
+                activeTab === 'invitations' && styles.activeTab
+              ]}
+              onPress={() => setActiveTab('invitations')}
+            >
+              <Text style={[
+                styles.tabText,
+                activeTab === 'invitations' && styles.activeTabText
+              ]}>
+                Invitations
+              </Text>
+              {receivedInvitations.length > 0 && (
+                <View style={styles.tabBadge}>
+                  <Text style={styles.tabBadgeText}>{receivedInvitations.length}</Text>
+                </View>
+              )}
+            </Pressable>
+
+            <Pressable 
+              style={[
+                styles.tab,
+                activeTab === 'past' && styles.activeTab
+              ]}
+              onPress={() => setActiveTab('past')}
+            >
+              <Text style={[
+                styles.tabText,
+                activeTab === 'past' && styles.activeTabText
+              ]}>
+                Past
+              </Text>
+              {pastBookings.length > 0 && (
+                <View style={styles.tabBadge}>
+                  <Text style={styles.tabBadgeText}>{pastBookings.length}</Text>
+                </View>
+              )}
+            </Pressable>
+          </View>
 
       {/* Content */}
       <ScrollView 
@@ -203,6 +274,75 @@ export const BookingsScreen: React.FC<Props> = () => {
           </View>
         )}
 
+        {activeTab === 'invitations' && (
+          <View style={styles.bookingsSection}>
+            {allInvitations.length > 0 ? (
+              <>
+                {/* Quick Stats for Invitations */}
+                <View style={styles.quickStats}>
+                  <View style={styles.statCard}>
+                    <Ionicons name="mail" size={20} color={colors.accent} />
+                    <Text style={styles.statNumber}>
+                      {receivedInvitations.length}
+                    </Text>
+                    <Text style={styles.statLabel}>Received</Text>
+                  </View>
+                  <View style={styles.statCard}>
+                    <Ionicons name="send" size={20} color={colors.success} />
+                    <Text style={styles.statNumber}>
+                      {sentInvitations.length}
+                    </Text>
+                    <Text style={styles.statLabel}>Sent</Text>
+                  </View>
+                  <View style={styles.statCard}>
+                    <Ionicons name="hourglass" size={20} color={colors.warning} />
+                    <Text style={styles.statNumber}>
+                      {allInvitations.filter(inv => inv.status === 'pending').length}
+                    </Text>
+                    <Text style={styles.statLabel}>Pending</Text>
+                  </View>
+                </View>
+
+                {/* Invitations List */}
+                <View style={styles.bookingsList}>
+                  {/* Received Invitations First */}
+                  {receivedInvitations.length > 0 && (
+                    <>
+                      <Text style={styles.sectionHeader}>Invitations for You</Text>
+                      {receivedInvitations.map((invitation) => (
+                        <InvitationCard
+                          key={invitation.id}
+                          invitation={invitation}
+                          onPress={() => handleInvitationPress(invitation)}
+                          onAccept={() => handleAcceptInvitation(invitation)}
+                          onDecline={() => handleDeclineInvitation(invitation)}
+                          onMaybe={() => handleMaybeInvitation(invitation)}
+                        />
+                      ))}
+                    </>
+                  )}
+
+                  {/* Sent Invitations */}
+                  {sentInvitations.length > 0 && (
+                    <>
+                      <Text style={styles.sectionHeader}>Your Events</Text>
+                      {sentInvitations.map((invitation) => (
+                        <InvitationCard
+                          key={invitation.id}
+                          invitation={invitation}
+                          onPress={() => handleInvitationPress(invitation)}
+                        />
+                      ))}
+                    </>
+                  )}
+                </View>
+              </>
+            ) : (
+              <EmptyState type="invitations" />
+            )}
+          </View>
+        )}
+
         {activeTab === 'past' && (
           <View style={styles.bookingsSection}>
             {pastBookings.length > 0 ? (
@@ -254,9 +394,13 @@ export const BookingsScreen: React.FC<Props> = () => {
       </ScrollView>
 
       {/* Floating Action Button */}
-      {activeTab === 'upcoming' && (
-        <Pressable style={styles.fab}>
-          <Ionicons name="add" size={24} color={colors.text} />
+      {(activeTab === 'upcoming' || activeTab === 'invitations') && (
+        <Pressable style={styles.fab} onPress={handleFabPress}>
+          <Ionicons 
+            name={activeTab === 'invitations' ? 'people' : 'add'} 
+            size={24} 
+            color={colors.text} 
+          />
         </Pressable>
       )}
     </View>
@@ -426,5 +570,12 @@ const styles = StyleSheet.create({
   },
   bottomSpacing: {
     height: spacing.xxxl,
+  },
+  sectionHeader: {
+    ...typography.headline,
+    color: colors.text,
+    fontWeight: '700',
+    marginBottom: spacing.md,
+    marginTop: spacing.lg,
   },
 }); 

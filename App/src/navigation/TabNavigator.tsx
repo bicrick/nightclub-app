@@ -4,6 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { HomeScreen } from '../screens/HomeScreen';
 import { VenuesNavigator } from './VenuesNavigator';
 import { BookingsScreen } from '../screens/BookingsScreen';
+import { FriendsScreen } from '../screens/FriendsScreen';
 import { ProfileScreen } from '../screens/ProfileScreen';
 import { colors } from '../styles/colors';
 
@@ -58,6 +59,15 @@ export const TabNavigator: React.FC = () => {
         options={{
           tabBarIcon: ({ color, size = 24 }) => (
             <Ionicons name="calendar" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Friends"
+        component={FriendsScreen}
+        options={{
+          tabBarIcon: ({ color, size = 24 }) => (
+            <Ionicons name="people" size={size} color={color} />
           ),
         }}
       />
