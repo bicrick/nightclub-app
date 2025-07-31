@@ -1,8 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { ComponentProps } from '../types';
 import { colors } from '../styles/colors';
 import { spacing } from '../styles/spacing';
+import { typography } from '../styles/typography';
 
 interface Props extends ComponentProps {
   // Home screen specific props can go here
@@ -10,41 +12,67 @@ interface Props extends ComponentProps {
 
 export const HomeScreen: React.FC<Props> = () => {
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       <View style={styles.header}>
         <Text style={styles.logo}>NightCrew</Text>
         <Text style={styles.subtitle}>Your VIP nightlife awaits</Text>
       </View>
       
       <View style={styles.content}>
-        <View style={styles.card}>
-          <Text style={styles.cardTitle}>🎯 Discover Venues</Text>
-          <Text style={styles.cardDescription}>
-            Find premium nightclubs and lounges in your area
-          </Text>
-        </View>
+        <FeatureCard
+          icon="search"
+          title="Discover Venues"
+          description="Find premium nightclubs and lounges in your area"
+        />
         
-        <View style={styles.card}>
-          <Text style={styles.cardTitle}>👥 Coordinate Groups</Text>
-          <Text style={styles.cardDescription}>
-            Invite friends and split bills automatically
-          </Text>
-        </View>
+        <FeatureCard
+          icon="people"
+          title="Coordinate Groups"
+          description="Invite friends and split bills automatically"
+        />
         
-        <View style={styles.card}>
-          <Text style={styles.cardTitle}>🏆 VIP Access</Text>
-          <Text style={styles.cardDescription}>
-            Skip lines with guaranteed table reservations
-          </Text>
-        </View>
+        <FeatureCard
+          icon="star"
+          title="VIP Access"
+          description="Skip lines with guaranteed table reservations"
+        />
         
         <View style={styles.statusCard}>
+          <Ionicons name="checkmark-circle" size={20} color={colors.success} />
           <Text style={styles.statusText}>
-            🚀 MVP Version - Basic Navigation Ready
+            MVP Version - Basic Navigation Ready
           </Text>
         </View>
       </View>
     </ScrollView>
+  );
+};
+
+interface FeatureCardProps {
+  icon: keyof typeof Ionicons.glyphMap;
+  title: string;
+  description: string;
+}
+
+const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) => {
+  return (
+    <Pressable 
+      style={({ pressed }) => [
+        styles.card,
+        pressed && styles.cardPressed,
+      ]}
+    >
+      <View style={styles.cardContent}>
+        <View style={styles.cardIcon}>
+          <Ionicons name={icon} size={24} color={colors.accent} />
+        </View>
+        <View style={styles.cardText}>
+          <Text style={styles.cardTitle}>{title}</Text>
+          <Text style={styles.cardDescription}>{description}</Text>
+        </View>
+        <Ionicons name="chevron-forward" size={20} color={colors.textMuted} />
+      </View>
+    </Pressable>
   );
 };
 
@@ -55,55 +83,70 @@ const styles = StyleSheet.create({
   },
   header: {
     alignItems: 'center',
-    paddingTop: spacing.xxxl,
+    paddingTop: spacing.xxxl + spacing.lg,
     paddingHorizontal: spacing.lg,
     paddingBottom: spacing.xl,
   },
   logo: {
-    fontSize: 32,
-    fontWeight: '700',
-    color: colors.primary,
-    marginBottom: spacing.sm,
+    ...typography.largeTitle,
+    color: colors.accent,
+    marginBottom: spacing.xs,
   },
   subtitle: {
-    fontSize: 16,
-    color: colors.textSecondary,
+    ...typography.bodySecondary,
     textAlign: 'center',
   },
   content: {
     padding: spacing.lg,
   },
   card: {
-    backgroundColor: colors.cardBackground,
+    backgroundColor: colors.backgroundCard,
     borderWidth: 1,
-    borderColor: colors.borderColor,
-    borderRadius: 16,
-    padding: spacing.lg,
+    borderColor: colors.border,
+    borderRadius: 12,
     marginBottom: spacing.md,
   },
+  cardPressed: {
+    opacity: 0.8,
+  },
+  cardContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: spacing.lg,
+  },
+  cardIcon: {
+    width: 40,
+    height: 40,
+    backgroundColor: colors.accentMuted,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: spacing.md,
+  },
+  cardText: {
+    flex: 1,
+  },
   cardTitle: {
-    fontSize: 18,
-    fontWeight: '600',
-    color: colors.text,
-    marginBottom: spacing.sm,
+    ...typography.headline,
+    marginBottom: spacing.xs,
   },
   cardDescription: {
-    fontSize: 14,
-    color: colors.textSecondary,
-    lineHeight: 20,
+    ...typography.caption,
   },
   statusCard: {
-    backgroundColor: colors.success + '20',
+    backgroundColor: colors.backgroundCard,
     borderWidth: 1,
     borderColor: colors.success,
-    borderRadius: 16,
+    borderRadius: 12,
     padding: spacing.lg,
     marginTop: spacing.lg,
+    flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
   },
   statusText: {
-    fontSize: 16,
+    ...typography.body,
     color: colors.success,
-    fontWeight: '600',
+    marginLeft: spacing.sm,
   },
 }); 

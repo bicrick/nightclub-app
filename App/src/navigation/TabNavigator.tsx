@@ -1,8 +1,8 @@
 import React from 'react';
-import { Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Ionicons } from '@expo/vector-icons';
 import { HomeScreen } from '../screens/HomeScreen';
-import { VenuesScreen } from '../screens/VenuesScreen';
+import { VenuesNavigator } from './VenuesNavigator';
 import { BookingsScreen } from '../screens/BookingsScreen';
 import { ProfileScreen } from '../screens/ProfileScreen';
 import { colors } from '../styles/colors';
@@ -15,15 +15,22 @@ export const TabNavigator: React.FC = () => {
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
-          backgroundColor: colors.backgroundSecondary,
-          borderTopColor: colors.borderColor,
+          backgroundColor: colors.backgroundCard,
+          borderTopColor: colors.border,
           borderTopWidth: 1,
+          height: 88,
+          paddingBottom: 24,
+          paddingTop: 8,
         },
-        tabBarActiveTintColor: colors.primary,
+        tabBarActiveTintColor: colors.accent,
         tabBarInactiveTintColor: colors.textMuted,
         tabBarLabelStyle: {
-          fontSize: 12,
+          fontSize: 11,
           fontWeight: '500',
+          marginTop: 4,
+        },
+        tabBarIconStyle: {
+          marginTop: 4,
         },
       }}
     >
@@ -31,17 +38,17 @@ export const TabNavigator: React.FC = () => {
         name="Home"
         component={HomeScreen}
         options={{
-          tabBarIcon: ({ color }) => (
-            <HomeIcon color={color} />
+          tabBarIcon: ({ color, size = 24 }) => (
+            <Ionicons name="home" size={size} color={color} />
           ),
         }}
       />
       <Tab.Screen
         name="Venues"
-        component={VenuesScreen}
+        component={VenuesNavigator}
         options={{
-          tabBarIcon: ({ color }) => (
-            <VenuesIcon color={color} />
+          tabBarIcon: ({ color, size = 24 }) => (
+            <Ionicons name="business" size={size} color={color} />
           ),
         }}
       />
@@ -49,8 +56,8 @@ export const TabNavigator: React.FC = () => {
         name="Bookings"
         component={BookingsScreen}
         options={{
-          tabBarIcon: ({ color }) => (
-            <BookingsIcon color={color} />
+          tabBarIcon: ({ color, size = 24 }) => (
+            <Ionicons name="calendar" size={size} color={color} />
           ),
         }}
       />
@@ -58,28 +65,11 @@ export const TabNavigator: React.FC = () => {
         name="Profile"
         component={ProfileScreen}
         options={{
-          tabBarIcon: ({ color }) => (
-            <ProfileIcon color={color} />
+          tabBarIcon: ({ color, size = 24 }) => (
+            <Ionicons name="person" size={size} color={color} />
           ),
         }}
       />
     </Tab.Navigator>
   );
-};
-
-// Simple icon components (we'll replace these with proper icons later)
-const HomeIcon: React.FC<{ color: string }> = ({ color }) => (
-  <Text style={{ color, fontSize: 24 }}>🏠</Text>
-);
-
-const VenuesIcon: React.FC<{ color: string }> = ({ color }) => (
-  <Text style={{ color, fontSize: 24 }}>🏢</Text>
-);
-
-const BookingsIcon: React.FC<{ color: string }> = ({ color }) => (
-  <Text style={{ color, fontSize: 24 }}>📅</Text>
-);
-
-const ProfileIcon: React.FC<{ color: string }> = ({ color }) => (
-  <Text style={{ color, fontSize: 24 }}>👤</Text>
-); 
+}; 

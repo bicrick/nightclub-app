@@ -9,12 +9,12 @@ export const AppNavigator: React.FC = () => {
       theme={{
         dark: true,
         colors: {
-          primary: colors.primary,
+          primary: colors.accent,
           background: colors.background,
-          card: colors.backgroundSecondary,
+          card: colors.backgroundCard,
           text: colors.text,
-          border: colors.borderColor,
-          notification: colors.secondary,
+          border: colors.border,
+          notification: colors.accent,
         },
         fonts: {
           regular: {

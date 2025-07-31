@@ -19,6 +19,12 @@ export interface Venue {
   imageUrl: string;
   priceRange: string;
   category: string;
+  description: string;
+  capacity: number;
+  minSpend: number;
+  features: string[];
+  openHours: string;
+  dresscode: string;
 }
 
 export interface Booking {

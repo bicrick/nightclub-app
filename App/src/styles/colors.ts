@@ -1,30 +1,29 @@
 export const colors = {
-  // Primary brand colors (matching website)
-  primary: '#8a2be2',
-  primaryDark: '#6a1b9a',
-  secondary: '#ff1493',
-  secondaryDark: '#c2185b',
+  // Minimalist dark backgrounds
+  background: '#000000',           // True black
+  backgroundCard: '#111111',       // Subtle card background
+  backgroundSecondary: '#1a1a1a',  // Slightly lighter sections
   
-  // Background colors
-  background: '#0a0a0a',
-  backgroundSecondary: '#1a1a1a',
-  backgroundTertiary: '#1a0f2e',
+  // Borders and dividers
+  border: '#333333',               // Subtle borders
+  borderLight: '#222222',          // Even more subtle borders
   
-  // Text colors
-  text: '#ffffff',
-  textSecondary: '#cccccc',
-  textMuted: '#888888',
+  // Text hierarchy
+  text: '#ffffff',                 // Pure white
+  textSecondary: '#999999',        // Muted gray
+  textMuted: '#666666',           // Very muted gray
+  textDisabled: '#444444',        // Disabled state
   
-  // UI colors
+  // Brand accent (used sparingly)
+  accent: '#8a2be2',              // Purple - strategic use only
+  accentMuted: '#8a2be240',       // Purple with opacity
+  
+  // Semantic colors
   success: '#00ff88',
   error: '#ff6b6b',
   warning: '#ffd700',
   
-  // Card and border colors
-  cardBackground: 'rgba(255, 255, 255, 0.05)',
-  borderColor: 'rgba(138, 43, 226, 0.3)',
-  
-  // Transparent colors
-  overlay: 'rgba(0, 0, 0, 0.5)',
-  gradient: ['#8a2be2', '#ff1493'],
+  // Interactive states
+  pressable: 'rgba(255, 255, 255, 0.1)',  // Subtle press state
+  overlay: 'rgba(0, 0, 0, 0.8)',          // Modal overlays
 }; 
