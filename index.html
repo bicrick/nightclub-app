@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NightCrew - Reserve Tables, Split Bills, Party Together</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">NightCrew</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#about">About</a>
+                <a href="#contact" class="cta-btn">Join Waitlist</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Your <span class="gradient-text">Squad</span> Deserves VIP
+                </h1>
+                <p class="hero-subtitle">
+                    Reserve premium tables at top nightclubs. Coordinate with friends. Split bills seamlessly. 
+                    All in one app.
+                </p>
+                <div class="hero-buttons">
+                    <button class="primary-btn">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' width='20' height='20'%3E%3Cpath d='M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z'/%3E%3C/svg%3E" alt="Apple">
+                        Download for iOS
+                    </button>
+                    <button class="secondary-btn">Join as Venue Partner</button>
+                </div>
+                <div class="coming-soon">
+                    <span>Coming Soon to the App Store</span>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="app-interface">
+                            <!-- iOS Status Bar -->
+                            <div class="status-bar">
+                                <div class="status-left">
+                                    <span>9:41</span>
+                                </div>
+                                <div class="status-right">
+                                    <div class="signal-bars">
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="wifi-icon"></div>
+                                    <div class="battery-icon"></div>
+                                </div>
+                            </div>
+
+                            <!-- App Header -->
+                            <div class="app-header">
+                                <span>NightCrew</span>
+                                <div class="profile-icon">AC</div>
+                            </div>
+
+                            <!-- Main Content -->
+                            <div class="app-content">
+                                <!-- Search Bar -->
+                                <input type="text" class="search-bar" placeholder="Search venues, locations...">
+                                
+                                <!-- Quick Actions -->
+                                <div class="quick-actions">
+                                    <button class="quick-action">Tonight</button>
+                                    <button class="quick-action">This Weekend</button>
+                                    <button class="quick-action">VIP Tables</button>
+                                </div>
+
+                                <!-- Category Chips -->
+                                <div class="category-chips">
+                                    <div class="chip active">All</div>
+                                    <div class="chip">Rooftop</div>
+                                    <div class="chip">Lounge</div>
+                                    <div class="chip">Club</div>
+                                    <div class="chip">Pool Party</div>
+                                </div>
+
+                                <!-- Section Header -->
+                                <div class="section-header">
+                                    <div class="section-title-small">Featured Tonight</div>
+                                    <div class="see-all">See All</div>
+                                </div>
+
+                                <!-- Venue Cards -->
+                                <div class="venue-card">
+                                    <div class="venue-header">
+                                        <div class="venue-info">
+                                            <h3>Skybar Rooftop</h3>
+                                            <p>Midtown • Table for 6</p>
+                                            <div class="venue-rating">
+                                                ⭐ 4.8 • 120 reviews
+                                            </div>
+                                            <div class="availability">3 tables available</div>
+                                        </div>
+                                        <div class="price">$450</div>
+                                    </div>
+                                    <div class="split-preview">
+                                        <div class="friend-avatars">
+                                            <div class="avatar">A</div>
+                                            <div class="avatar">M</div>
+                                            <div class="avatar">J</div>
+                                            <div class="avatar">S</div>
+                                            <div class="avatar">+2</div>
+                                        </div>
+                                        <div class="split-amount">$75 each</div>
+                                    </div>
+                                </div>
+
+                                <div class="venue-card">
+                                    <div class="venue-header">
+                                        <div class="venue-info">
+                                            <h3>Neon Nightclub</h3>
+                                            <p>Downtown • Table for 8</p>
+                                            <div class="venue-rating">
+                                                ⭐ 4.6 • 89 reviews
+                                            </div>
+                                            <div class="availability">1 table available</div>
+                                        </div>
+                                        <div class="price">$680</div>
+                                    </div>
+                                    <div class="split-preview">
+                                        <div class="friend-avatars">
+                                            <div class="avatar">A</div>
+                                            <div class="avatar">L</div>
+                                            <div class="avatar">K</div>
+                                            <div class="avatar">R</div>
+                                            <div class="avatar">+4</div>
+                                        </div>
+                                        <div class="split-amount">$85 each</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bottom Navigation -->
+                            <div class="bottom-nav">
+                                <div class="nav-item active">
+                                    <div class="nav-icon home"></div>
+                                    <span>Home</span>
+                                </div>
+                                <div class="nav-item">
+                                    <div class="nav-icon search"></div>
+                                    <span>Explore</span>
+                                </div>
+                                <div class="nav-item">
+                                    <div class="nav-icon bookings"></div>
+                                    <span>Bookings</span>
+                                </div>
+                                <div class="nav-item">
+                                    <div class="nav-icon profile"></div>
+                                    <span>Profile</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Activity & Social Proof -->
+    <section class="live-activity">
+        <div class="container">
+            <div class="activity-header">
+                <h2>Join the Movement</h2>
+                <p>See what's happening right now across the city</p>
+            </div>
+            
+            <div class="live-stats">
+                <div class="stat-item">
+                    <div class="stat-number live-counter" data-target="127">0</div>
+                    <div class="stat-label">Tables unlocked tonight</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number live-counter" data-target="842">0</div>
+                    <div class="stat-label">Friends coordinated today</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number live-counter" data-target="15">0</div>
+                    <div class="stat-label">Cities & counting</div>
+                </div>
+            </div>
+
+            <div class="activity-feed">
+                <div class="feed-header">
+                    <span class="live-indicator">🔴 LIVE</span>
+                    <span>Recent Activity</span>
+                </div>
+                <div class="activity-items">
+                    <div class="activity-item">
+                        <div class="activity-avatars">
+                            <div class="avatar">J</div>
+                            <div class="avatar">M</div>
+                            <div class="avatar">+4</div>
+                        </div>
+                        <div class="activity-text">
+                            <strong>Jordan and crew</strong> just unlocked <span class="venue-highlight">Skybar Rooftop</span>
+                        </div>
+                        <div class="activity-time">2 min ago</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-avatars">
+                            <div class="avatar">A</div>
+                            <div class="avatar">S</div>
+                            <div class="avatar">+6</div>
+                        </div>
+                        <div class="activity-text">
+                            <strong>Alex's birthday squad</strong> secured VIP at <span class="venue-highlight">Neon Nightclub</span>
+                        </div>
+                        <div class="activity-time">5 min ago</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-avatars">
+                            <div class="avatar">M</div>
+                            <div class="avatar">L</div>
+                            <div class="avatar">+3</div>
+                        </div>
+                        <div class="activity-text">
+                            <strong>Maya and friends</strong> earned <span class="badge-highlight">🏆 VIP Regular</span> status
+                        </div>
+                        <div class="activity-time">12 min ago</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Group Perks & Loyalty -->
+    <section class="group-perks">
+        <div class="container">
+            <h2 class="section-title">Level Up Your Crew</h2>
+            <p class="section-subtitle">The more you party together, the better it gets</p>
+            
+            <div class="perks-grid">
+                <div class="perk-card bronze">
+                    <div class="perk-badge">🥉 Newcomer</div>
+                    <h3>First Table</h3>
+                    <ul class="perk-benefits">
+                        <li>✓ VIP entry privileges</li>
+                        <li>✓ Bill splitting & coordination</li>
+                        <li>✓ 24/7 customer support</li>
+                    </ul>
+                    <div class="perk-requirement">Complete your first booking</div>
+                </div>
+                
+                <div class="perk-card silver">
+                    <div class="perk-badge">🥈 Squad Regular</div>
+                    <h3>3 Tables Unlocked</h3>
+                    <ul class="perk-benefits">
+                        <li>✓ All Newcomer benefits</li>
+                        <li>✓ Priority table selection</li>
+                        <li>✓ Complimentary bottle upgrade</li>
+                        <li>✓ Group concierge service</li>
+                    </ul>
+                    <div class="perk-requirement">Book 3 tables in 2 months</div>
+                </div>
+                
+                <div class="perk-card gold">
+                    <div class="perk-badge">🏆 VIP Legends</div>
+                    <h3>10 Tables & Beyond</h3>
+                    <ul class="perk-benefits">
+                        <li>✓ All previous benefits</li>
+                        <li>✓ Exclusive venue access</li>
+                        <li>✓ Personal party coordinator</li>
+                        <li>✓ Birthday perks & surprises</li>
+                        <li>✓ Early access to new venues</li>
+                    </ul>
+                    <div class="perk-requirement">10+ successful bookings</div>
+                </div>
+            </div>
+            
+            <div class="achievement-showcase">
+                <h3>Crew Achievements</h3>
+                <div class="badges-grid">
+                    <div class="badge-item">
+                        <div class="badge-icon">🎯</div>
+                        <div class="badge-info">
+                            <div class="badge-name">No Flake Squad</div>
+                            <div class="badge-desc">5 bookings, zero cancels</div>
+                        </div>
+                    </div>
+                    <div class="badge-item">
+                        <div class="badge-icon">🍾</div>
+                        <div class="badge-info">
+                            <div class="badge-name">Bottle Poppers</div>
+                            <div class="badge-desc">Upgraded bottles 3 times</div>
+                        </div>
+                    </div>
+                    <div class="badge-item">
+                        <div class="badge-icon">🌟</div>
+                        <div class="badge-info">
+                            <div class="badge-name">Venue Explorer</div>
+                            <div class="badge-desc">Tried 10+ different venues</div>
+                        </div>
+                    </div>
+                    <div class="badge-item">
+                        <div class="badge-icon">🎂</div>
+                        <div class="badge-info">
+                            <div class="badge-name">Birthday Legend</div>
+                            <div class="badge-desc">Celebrated 5 crew birthdays</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety & Concierge -->
+    <section class="safety-features">
+        <div class="container">
+            <div class="safety-content">
+                <div class="safety-text">
+                    <h2>Your Safety, Our Priority</h2>
+                    <p class="safety-subtitle">Advanced safety features and white-glove concierge service ensure every night out is worry-free.</p>
+                    
+                    <div class="safety-feature">
+                        <div class="feature-icon">🛡️</div>
+                        <div class="feature-content">
+                            <h3>Smart Check-ins</h3>
+                            <p>Auto-notify emergency contacts when your crew arrives and leaves venues safely.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="safety-feature">
+                        <div class="feature-icon">🚗</div>
+                        <div class="feature-content">
+                            <h3>Safe Ride Coordination</h3>
+                            <p>Get smart reminders and group ride-sharing options at the end of your night.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="safety-feature">
+                        <div class="feature-icon">💬</div>
+                        <div class="feature-content">
+                            <h3>24/7 Concierge Support</h3>
+                            <p>Last-minute changes? Special requests? Our team is always here to help.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="concierge-demo">
+                    <div class="chat-window">
+                        <div class="chat-header">
+                            <div class="chat-title">NightCrew Concierge</div>
+                            <div class="online-status">🟢 Online</div>
+                        </div>
+                        <div class="chat-messages">
+                            <div class="message user">
+                                <div class="message-text">Hey! Our group is running 30 min late to Skybar. Can you help?</div>
+                                <div class="message-time">11:47 PM</div>
+                            </div>
+                            <div class="message concierge">
+                                <div class="message-text">No problem! I've already contacted Skybar and they're holding your table. Your QR code is still valid. Have a great night! 🎉</div>
+                                <div class="message-time">11:48 PM</div>
+                            </div>
+                            <div class="message user">
+                                <div class="message-text">Amazing, thank you!</div>
+                                <div class="message-time">11:48 PM</div>
+                            </div>
+                        </div>
+                        <div class="chat-input">
+                            <input type="text" placeholder="Type a message..." disabled>
+                            <button disabled>Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Browse & Book</h3>
+                        <p>Discover premium venues and reserve tables for your crew. See real-time availability and pricing.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Invite Your Squad</h3>
+                        <p>Add friends to your reservation. Everyone gets notified and can confirm their spot.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Split & Pay</h3>
+                        <p>Costs are automatically split evenly. Secure payments processed before you even arrive.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIP Entry Process -->
+    <section class="vip-entry">
+        <div class="container">
+            <div class="vip-entry-content">
+                <div class="vip-entry-visual">
+                    <div class="phone-entry-demo">
+                        <div class="qr-code-display">
+                            <div class="qr-header">
+                                <span class="venue-name">Skybar Rooftop</span>
+                                <span class="entry-time">Tonight • 10:00 PM</span>
+                            </div>
+                            <div class="qr-code">
+                                <div class="qr-pattern">
+                                    <div class="qr-square"></div>
+                                    <div class="qr-square"></div>
+                                    <div class="qr-square"></div>
+                                    <div class="qr-square"></div>
+                                    <div class="qr-square"></div>
+                                    <div class="qr-square"></div>
+                                    <div class="qr-square"></div>
+                                    <div class="qr-square"></div>
+                                    <div class="qr-square"></div>
+                                </div>
+                            </div>
+                            <div class="entry-details">
+                                <div class="party-info">
+                                    <span>Party of 6</span>
+                                    <span>Table #12</span>
+                                </div>
+                                <div class="entry-status">
+                                    <div class="status-indicator"></div>
+                                    <span>VIP Entry Ready</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="entry-arrow">→</div>
+                    <div class="vip-line">
+                        <div class="line-illustration">
+                            <div class="regular-line">
+                                <div class="person"></div>
+                                <div class="person"></div>
+                                <div class="person"></div>
+                                <div class="person"></div>
+                                <div class="person"></div>
+                                <span class="line-label">Regular Line</span>
+                            </div>
+                            <div class="vip-entrance">
+                                <div class="vip-person highlight"></div>
+                                <span class="vip-label">You: Skip the Line</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vip-entry-text">
+                    <h2>Skip Every Line, Every Time</h2>
+                    <p class="vip-subtitle">Your reservation comes with instant VIP entry privileges</p>
+                    
+                    <div class="entry-benefits">
+                        <div class="benefit">
+                            <div class="benefit-icon">⚡</div>
+                            <div class="benefit-content">
+                                <h3>Instant Entry</h3>
+                                <p>Show your unique QR code and walk straight in. No waiting, no hassle.</p>
+                            </div>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon">🎯</div>
+                            <div class="benefit-content">
+                                <h3>Direct to Table</h3>
+                                <p>Skip the crowded entrance. Our staff escorts you directly to your reserved table.</p>
+                            </div>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon">👑</div>
+                            <div class="benefit-content">
+                                <h3>VIP Treatment</h3>
+                                <p>Priority service from the moment you arrive. Your night starts without delays.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="entry-stats">
+                        <div class="stat">
+                            <div class="stat-number">2 min</div>
+                            <div class="stat-label">Average entry time</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">0</div>
+                            <div class="stat-label">Lines to wait in</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Guaranteed entry</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Pool System -->
+    <section class="payment-pool">
+        <div class="container">
+            <div class="payment-content">
+                <div class="payment-text">
+                    <h2>Fill the Pool, Unlock the Table</h2>
+                    <p class="payment-subtitle">Everyone pays their share before the night begins. No awkward conversations, no chasing friends for money.</p>
+                    
+                    <div class="payment-features">
+                        <div class="payment-feature">
+                            <div class="feature-icon">💰</div>
+                            <div class="feature-content">
+                                <h3>Pay Your Way</h3>
+                                <p>Venmo, credit card, Apple Pay, or any payment method that works for you.</p>
+                            </div>
+                        </div>
+                        <div class="payment-feature">
+                            <div class="feature-icon">🔒</div>
+                            <div class="feature-content">
+                                <h3>Table Locks Until Full</h3>
+                                <p>Your reservation is secured only when everyone has contributed their share.</p>
+                            </div>
+                        </div>
+                        <div class="payment-feature">
+                            <div class="feature-icon">⏰</div>
+                            <div class="feature-content">
+                                <h3>Smart Reminders</h3>
+                                <p>Gentle nudges keep your crew on track. No one gets left behind.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="payment-visual">
+                    <div class="payment-demo">
+                        <div class="pool-header">
+                            <h3>Skybar Rooftop - Tonight</h3>
+                            <div class="timer">⏰ 2 hours left to complete</div>
+                        </div>
+                        
+                        <div class="payment-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span class="current">$375</span>
+                                <span class="total">/ $450</span>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-status">
+                            <div class="status-text">5 of 6 friends have paid</div>
+                            <div class="unlock-amount">$75 needed to unlock table</div>
+                        </div>
+                        
+                        <div class="friends-payment">
+                            <div class="friend-row paid">
+                                <div class="friend-avatar">A</div>
+                                <div class="friend-info">
+                                    <span class="friend-name">Alex Chen</span>
+                                    <span class="payment-method">💳 Venmo</span>
+                                </div>
+                                <div class="payment-amount">$75</div>
+                                <div class="payment-check">✓</div>
+                            </div>
+                            <div class="friend-row paid">
+                                <div class="friend-avatar">M</div>
+                                <div class="friend-info">
+                                    <span class="friend-name">Maya Rodriguez</span>
+                                    <span class="payment-method">💳 Credit Card</span>
+                                </div>
+                                <div class="payment-amount">$75</div>
+                                <div class="payment-check">✓</div>
+                            </div>
+                            <div class="friend-row paid">
+                                <div class="friend-avatar">J</div>
+                                <div class="friend-info">
+                                    <span class="friend-name">Jordan Kim</span>
+                                    <span class="payment-method">📱 Apple Pay</span>
+                                </div>
+                                <div class="payment-amount">$75</div>
+                                <div class="payment-check">✓</div>
+                            </div>
+                            <div class="friend-row paid">
+                                <div class="friend-avatar">S</div>
+                                <div class="friend-info">
+                                    <span class="friend-name">Sarah Johnson</span>
+                                    <span class="payment-method">💳 Venmo</span>
+                                </div>
+                                <div class="payment-amount">$75</div>
+                                <div class="payment-check">✓</div>
+                            </div>
+                            <div class="friend-row paid">
+                                <div class="friend-avatar">L</div>
+                                <div class="friend-info">
+                                    <span class="friend-name">Lisa Wong</span>
+                                    <span class="payment-method">💳 Credit Card</span>
+                                </div>
+                                <div class="payment-amount">$75</div>
+                                <div class="payment-check">✓</div>
+                            </div>
+                            <div class="friend-row pending">
+                                <div class="friend-avatar">R</div>
+                                <div class="friend-info">
+                                    <span class="friend-name">Ryan Martinez</span>
+                                    <span class="payment-method">⏳ Payment pending</span>
+                                </div>
+                                <div class="payment-amount">$75</div>
+                                <div class="payment-reminder">Remind</div>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-methods">
+                            <div class="method-title">Accepted Payment Methods</div>
+                            <div class="methods-grid">
+                                <div class="method">💳</div>
+                                <div class="method">💰</div>
+                                <div class="method">📱</div>
+                                <div class="method">🏦</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pool-benefits">
+                <div class="benefit-card">
+                    <div class="benefit-number">1</div>
+                    <h3>Create Pool</h3>
+                    <p>Book your table and invite friends to contribute</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-number">2</div>
+                    <h3>Everyone Pays</h3>
+                    <p>Friends pay their share using their preferred method</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-number">3</div>
+                    <h3>Table Unlocks</h3>
+                    <p>Once full payment received, your VIP experience begins</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why NightCrew?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Guaranteed Tables</h3>
+                    <p>Skip the line and uncertainty. Your table is locked in at partner venues.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💳</div>
+                    <h3>Smart Bill Splitting</h3>
+                    <p>No more awkward payment conversations. Everyone pays their share automatically.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">👥</div>
+                    <h3>Group Coordination</h3>
+                    <p>Keep your crew organized with shared reservations and real-time updates.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🏆</div>
+                    <h3>VIP Experience</h3>
+                    <p>Access exclusive venues and prime table locations you can't get elsewhere.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h3>iOS Native</h3>
+                    <p>Built specifically for iPhone with a smooth, intuitive interface.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure Payments</h3>
+                    <p>Bank-level security for all transactions. Your financial data stays protected.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venues -->
+    <section class="venues">
+        <div class="container">
+            <h2 class="section-title">Partner Venues</h2>
+            <p class="section-subtitle">Premium nightclubs and lounges in major cities</p>
+            <div class="venue-logos">
+                <div class="venue-logo">SKYBAR</div>
+                <div class="venue-logo">NEON</div>
+                <div class="venue-logo">VELVET</div>
+                <div class="venue-logo">APEX</div>
+                <div class="venue-logo">NOIR</div>
+            </div>
+            <p class="coming-soon-text">More venues joining every week</p>
+        </div>
+    </section>
+
+    <!-- About/Founders -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Built by Nightlife Experts</h2>
+                    <p>NightCrew was founded by two Harvard Business School graduates who experienced firsthand the frustrations of coordinating group nights out and splitting bills at premium venues.</p>
+                    <p>After countless nights dealing with reservation hassles and payment confusion, we decided to build the solution we wished existed.</p>
+                    <div class="founders">
+                        <div class="founder">
+                            <div class="founder-avatar"></div>
+                            <div class="founder-info">
+                                <h4>Alex Chen</h4>
+                                <p>Co-Founder & CEO<br>Harvard Business School '23</p>
+                            </div>
+                        </div>
+                        <div class="founder">
+                            <div class="founder-avatar"></div>
+                            <div class="founder-info">
+                                <h4>Jordan Martinez</h4>
+                                <p>Co-Founder & CTO<br>Harvard Business School '23</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Beta Users</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Partner Venues</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">$2M+</div>
+                        <div class="stat-label">Reservations Booked</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Elevate Your Night Out?</h2>
+                <p>Join thousands on our waitlist and be first to experience the future of nightlife.</p>
+                <div class="cta-buttons">
+                    <button class="primary-btn large">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' width='20' height='20'%3E%3Cpath d='M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z'/%3E%3C/svg%3E" alt="Apple">
+                        Join iOS Waitlist
+                    </button>
+                    <button class="secondary-btn large">Partner With Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="logo">NightCrew</div>
+                    <p>Elevating nightlife, one table at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#">Pricing</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="#about">About</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Press</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Privacy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NightCrew. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
