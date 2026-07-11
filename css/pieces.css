@@ -1,26 +1,8 @@
-.chapter {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  min-height: 100svh;
-  min-height: 100dvh;
-}
-
 .piece.chapter {
-  /* Explicit height so absolute media fills the snap chapter on mobile */
   height: 100svh;
   height: 100dvh;
   min-height: 100svh;
   min-height: 100dvh;
-}
-
-html {
-  scroll-snap-type: y mandatory;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-snap-type: none;
-  }
 }
 
 .chapter-rail {
@@ -77,6 +59,7 @@ html {
   align-items: flex-end;
   background: var(--color-cream);
   padding: calc(var(--nav-height) + var(--space-8)) var(--space-4) var(--space-8);
+  min-height: auto;
 }
 
 .work-intro .section-title {
