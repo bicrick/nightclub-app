@@ -125,7 +125,8 @@
 
 .contact-link:hover {
   opacity: 1;
-  border-bottom-color: var(--color-ink);
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
 }
 
 .contact-link span {
