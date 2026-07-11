@@ -1,9 +1,7 @@
 import { initNav } from "./nav.js";
-import { initHero } from "./hero.js";
-import { initGallery } from "./gallery.js";
+import { initPieces } from "./pieces.js";
 import { initReveal } from "./reveal.js";
 
 initNav();
-initHero();
-initGallery();
+initPieces();
 initReveal();
