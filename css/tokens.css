@@ -1,16 +1,12 @@
 :root {
-  --color-cream: #faf6f1;
-  --color-cream-deep: #f0e9e0;
-  --color-stone: #e4dcd1;
-  --color-charcoal: #1f1e1c;
-  --color-ink: #2c2a27;
-  --color-muted: #6b6560;
-  --color-terracotta: #b85c38;
-  --color-teal: #3d6f6a;
-  --color-gold: #b8954a;
+  --color-cream: #f7f5f2;
+  --color-cream-deep: #efece7;
+  --color-stone: #ddd8d0;
+  --color-charcoal: #161615;
+  --color-ink: #1c1b19;
+  --color-muted: #7a756e;
 
-  --font-display: "Fraunces", "Georgia", serif;
-  --font-body: "Outfit", "Helvetica Neue", sans-serif;
+  --font-sans: "Instrument Sans", "Helvetica Neue", sans-serif;
 
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -19,30 +15,29 @@
   --space-5: 1.5rem;
   --space-6: 2rem;
   --space-7: 3rem;
-  --space-8: 4rem;
-  --space-9: 6rem;
-  --space-10: 8rem;
+  --space-8: 4.5rem;
+  --space-9: 6.5rem;
+  --space-10: 9rem;
 
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-md: 1.125rem;
+  --text-xs: 0.6875rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.9375rem;
+  --text-md: 1.0625rem;
   --text-lg: 1.25rem;
-  --text-xl: 1.5rem;
-  --text-2xl: clamp(1.75rem, 4vw, 2.5rem);
-  --text-3xl: clamp(2.25rem, 7vw, 4.5rem);
-  --text-hero: clamp(2.75rem, 10vw, 6.5rem);
+  --text-xl: clamp(1.5rem, 3.5vw, 2rem);
+  --text-2xl: clamp(1.75rem, 5vw, 2.75rem);
+  --text-hero: clamp(2.5rem, 9vw, 5.5rem);
 
-  --nav-height: 3.5rem;
+  --nav-height: 3.25rem;
   --content-max: 72rem;
-  --measure: 38rem;
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --duration: 700ms;
-  --duration-slow: 1400ms;
+  --measure: 34rem;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration: 900ms;
+  --duration-slow: 1600ms;
 }
 
 @media (min-width: 768px) {
   :root {
-    --nav-height: 4.25rem;
+    --nav-height: 4rem;
   }
 }

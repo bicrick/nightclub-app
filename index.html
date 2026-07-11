@@ -11,14 +11,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Outfit:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/tokens.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/hero.css" />
-    <link rel="stylesheet" href="css/gallery.css" />
+    <link rel="stylesheet" href="css/pieces.css" />
     <link rel="stylesheet" href="css/sections.css" />
     <link rel="stylesheet" href="css/motion.css" />
   </head>
@@ -45,39 +45,13 @@
     <main id="top">
       <section class="hero" aria-label="Introduction">
         <div class="hero-media" aria-hidden="true">
-          <div class="hero-slide is-active">
-            <img
-              src="assets/photos/IMG_3323.jpg"
-              alt=""
-              width="1788"
-              height="1907"
-              fetchpriority="high"
-            />
-          </div>
-          <div class="hero-slide">
-            <img
-              src="assets/photos/RayBrownOct23-115.jpg"
-              alt=""
-              width="800"
-              height="800"
-            />
-          </div>
-          <div class="hero-slide">
-            <img
-              src="assets/photos/MargaritaInvitational2024-12.jpg"
-              alt=""
-              width="800"
-              height="800"
-            />
-          </div>
-          <div class="hero-slide">
-            <img
-              src="assets/photos/RayBrownOct23-78.jpg"
-              alt=""
-              width="800"
-              height="800"
-            />
-          </div>
+          <img
+            src="assets/photos/IMG_3323.jpg"
+            alt=""
+            width="1788"
+            height="1907"
+            fetchpriority="high"
+          />
         </div>
         <div class="hero-overlay" aria-hidden="true"></div>
         <div class="hero-content">
@@ -85,151 +59,208 @@
           <h1 class="hero-title">Ray Brown Ceramics</h1>
           <p class="hero-lede">
             Utilitarian pottery shaped for a slower encounter — confident line,
-            pressurized volume, and surface that invites the hand.
+            pressurized volume, surface that invites the hand.
           </p>
           <div class="hero-actions">
             <a class="btn" href="#work">View work</a>
-            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+            <a class="btn btn-ghost" href="#contact">Contact</a>
           </div>
         </div>
         <a class="hero-scroll" href="#work">Scroll</a>
       </section>
 
-      <section class="section work" id="work">
+      <section class="section work-intro" id="work">
         <div class="section-inner">
           <p class="section-label reveal">Selected work</p>
-          <h2 class="section-title reveal reveal-delay-1">Forms meant to be held</h2>
-          <div class="gallery">
-            <figure class="gallery-item reveal" data-index="0">
-              <img
-                src="assets/photos/IMG_3323.jpg"
-                alt="Sculptural ceramic bowl with wire loop and graphic surface marks"
-                width="1788"
-                height="1907"
-                loading="lazy"
-              />
-              <figcaption>Flower vessel</figcaption>
-            </figure>
-            <figure class="gallery-item reveal reveal-delay-1" data-index="1">
-              <img
-                src="assets/photos/RayBrownOct23-115.jpg"
-                alt="Three tall ceramic vessels with graphic marks and textured bases"
-                width="800"
-                height="800"
-                loading="lazy"
-              />
-              <figcaption>Vessel group</figcaption>
-            </figure>
-            <figure class="gallery-item reveal reveal-delay-2" data-index="2">
-              <img
-                src="assets/photos/MargaritaInvitational2024-12.jpg"
-                alt="Pair of ceramic goblets with geometric stems and gold accents"
-                width="800"
-                height="800"
-                loading="lazy"
-              />
-              <figcaption>Goblets</figcaption>
-            </figure>
-            <figure class="gallery-item reveal" data-index="3">
-              <img
-                src="assets/photos/RayBrownOct23-1.jpg"
-                alt="Ceramic mug with teal washes, gold square, and textured foot"
-                width="800"
-                height="800"
-                loading="lazy"
-              />
-              <figcaption>Mug</figcaption>
-            </figure>
-            <figure class="gallery-item reveal reveal-delay-1" data-index="4">
-              <img
-                src="assets/photos/RayBrownOct23-78.jpg"
-                alt="Lidded ceramic jar with mustard and teal surface decoration"
-                width="800"
-                height="800"
-                loading="lazy"
-              />
-              <figcaption>Lidded jar</figcaption>
-            </figure>
-            <figure class="gallery-item reveal reveal-delay-2" data-index="5">
-              <img
-                src="assets/photos/RayBrownOct23-62.jpg"
-                alt="Ceramic vessel photographed in studio lighting"
-                width="800"
-                height="800"
-                loading="lazy"
-              />
-              <figcaption>Studio form</figcaption>
-            </figure>
-            <figure class="gallery-item reveal" data-index="6">
-              <img
-                src="assets/photos/RayBrownOct23-50.jpg"
-                alt="Ceramic pottery piece with layered glaze and graphic marks"
-                width="800"
-                height="800"
-                loading="lazy"
-              />
-              <figcaption>Surface study</figcaption>
-            </figure>
-            <figure class="gallery-item reveal reveal-delay-1" data-index="7">
-              <img
-                src="assets/photos/RayBrownOct23-118.jpg"
-                alt="Ceramic work with confident line and energetic surface decoration"
-                width="800"
-                height="800"
-                loading="lazy"
-              />
-              <figcaption>Assemblage</figcaption>
-            </figure>
-            <figure class="gallery-item reveal reveal-delay-2" data-index="8">
-              <img
-                src="assets/photos/sxpf/sxpf-gallery-2.webp"
-                alt="Pair of sculptural ceramic chalices against a white ground"
-                width="1000"
-                height="1000"
-                loading="lazy"
-              />
-              <figcaption>Chalices</figcaption>
-            </figure>
-            <figure class="gallery-item reveal" data-index="9">
-              <img
-                src="assets/photos/RayBrownOct23-25.jpg"
-                alt="Ceramic piece from the Ray Brown studio series"
-                width="800"
-                height="800"
-                loading="lazy"
-              />
-              <figcaption>Thrown form</figcaption>
-            </figure>
-            <figure class="gallery-item reveal reveal-delay-1" data-index="10">
-              <img
-                src="assets/photos/RayBrownOct23-4.jpg"
-                alt="Ceramic vessel with graphic surface language"
-                width="800"
-                height="800"
-                loading="lazy"
-              />
-              <figcaption>Contour study</figcaption>
-            </figure>
-            <figure class="gallery-item reveal reveal-delay-2" data-index="11">
-              <img
-                src="assets/photos/sxpf/sxpf-gallery-3.webp"
-                alt="Ray Brown ceramic gallery piece"
-                width="1000"
-                height="1000"
-                loading="lazy"
-              />
-              <figcaption>Gallery piece</figcaption>
-            </figure>
-          </div>
+          <h2 class="section-title reveal reveal-delay-1">One form at a time</h2>
         </div>
       </section>
+
+      <div class="pieces-stream">
+        <section class="piece" aria-label="Flower vessel">
+          <div class="piece-media">
+            <img
+              src="assets/photos/IMG_3323.jpg"
+              alt="Sculptural ceramic bowl with wire loop and graphic surface marks"
+              width="1788"
+              height="1907"
+              loading="lazy"
+            />
+            <div class="piece-shade" aria-hidden="true"></div>
+          </div>
+          <div class="piece-content">
+            <span class="piece-index">01 / 08</span>
+            <h3 class="piece-title">Flower vessel</h3>
+            <p class="piece-note">
+              Pressurized volume and a quiet graphic mark — made to hold stillness
+              as much as stems.
+            </p>
+          </div>
+          <span class="piece-progress" aria-hidden="true">01</span>
+        </section>
+
+        <section class="piece" aria-label="Vessel group">
+          <div class="piece-media">
+            <img
+              src="assets/photos/RayBrownOct23-115.jpg"
+              alt="Three tall ceramic vessels with graphic marks and textured bases"
+              width="800"
+              height="800"
+              loading="lazy"
+            />
+            <div class="piece-shade" aria-hidden="true"></div>
+          </div>
+          <div class="piece-content">
+            <span class="piece-index">02 / 08</span>
+            <h3 class="piece-title">Vessel group</h3>
+            <p class="piece-note">
+              Soft indentations, cream glaze, and bases that feel dug from
+              sediment — a conversation in proportion.
+            </p>
+          </div>
+          <span class="piece-progress" aria-hidden="true">02</span>
+        </section>
+
+        <section class="piece" aria-label="Goblets">
+          <div class="piece-media">
+            <img
+              src="assets/photos/MargaritaInvitational2024-12.jpg"
+              alt="Pair of ceramic goblets with geometric stems and gold accents"
+              width="800"
+              height="800"
+              loading="lazy"
+            />
+            <div class="piece-shade" aria-hidden="true"></div>
+          </div>
+          <div class="piece-content">
+            <span class="piece-index">03 / 08</span>
+            <h3 class="piece-title">Goblets</h3>
+            <p class="piece-note">
+              Faceted stems and fluid washes — architecture meeting the hand at
+              drinking height.
+            </p>
+          </div>
+          <span class="piece-progress" aria-hidden="true">03</span>
+        </section>
+
+        <section class="piece" aria-label="Mug">
+          <div class="piece-media">
+            <img
+              src="assets/photos/RayBrownOct23-1.jpg"
+              alt="Ceramic mug with teal washes, gold square, and textured foot"
+              width="800"
+              height="800"
+              loading="lazy"
+            />
+            <div class="piece-shade" aria-hidden="true"></div>
+          </div>
+          <div class="piece-content">
+            <span class="piece-index">04 / 08</span>
+            <h3 class="piece-title">Mug</h3>
+            <p class="piece-note">
+              Daily use as ritual — gold square, cobalt interior, a foot that
+              catches color like tide.
+            </p>
+          </div>
+          <span class="piece-progress" aria-hidden="true">04</span>
+        </section>
+
+        <section class="piece" aria-label="Lidded jar">
+          <div class="piece-media">
+            <img
+              src="assets/photos/RayBrownOct23-78.jpg"
+              alt="Lidded ceramic jar with mustard and teal surface decoration"
+              width="800"
+              height="800"
+              loading="lazy"
+            />
+            <div class="piece-shade" aria-hidden="true"></div>
+          </div>
+          <div class="piece-content">
+            <span class="piece-index">05 / 08</span>
+            <h3 class="piece-title">Lidded jar</h3>
+            <p class="piece-note">
+              Mustard, teal, and hard black geometry — containment as a kind of
+              pause.
+            </p>
+          </div>
+          <span class="piece-progress" aria-hidden="true">05</span>
+        </section>
+
+        <section class="piece" aria-label="Studio form">
+          <div class="piece-media">
+            <img
+              src="assets/photos/RayBrownOct23-62.jpg"
+              alt="Ceramic vessel photographed in studio lighting"
+              width="800"
+              height="800"
+              loading="lazy"
+            />
+            <div class="piece-shade" aria-hidden="true"></div>
+          </div>
+          <div class="piece-content">
+            <span class="piece-index">06 / 08</span>
+            <h3 class="piece-title">Studio form</h3>
+            <p class="piece-note">
+              Confidence of line held in soft clay — the inhale before the glaze
+              settles.
+            </p>
+          </div>
+          <span class="piece-progress" aria-hidden="true">06</span>
+        </section>
+
+        <section class="piece" aria-label="Chalices">
+          <div class="piece-media">
+            <img
+              src="assets/photos/sxpf/sxpf-gallery-2.webp"
+              alt="Pair of sculptural ceramic chalices against a white ground"
+              width="1000"
+              height="1000"
+              loading="lazy"
+            />
+            <div class="piece-shade" aria-hidden="true"></div>
+          </div>
+          <div class="piece-content">
+            <span class="piece-index">07 / 08</span>
+            <h3 class="piece-title">Chalices</h3>
+            <p class="piece-note">
+              Cubed stems and open bowls — streamlining-era proportion translated
+              into clay.
+            </p>
+          </div>
+          <span class="piece-progress" aria-hidden="true">07</span>
+        </section>
+
+        <section class="piece" aria-label="Assemblage">
+          <div class="piece-media">
+            <img
+              src="assets/photos/RayBrownOct23-118.jpg"
+              alt="Ceramic work with confident line and energetic surface decoration"
+              width="800"
+              height="800"
+              loading="lazy"
+            />
+            <div class="piece-shade" aria-hidden="true"></div>
+          </div>
+          <div class="piece-content">
+            <span class="piece-index">08 / 08</span>
+            <h3 class="piece-title">Assemblage</h3>
+            <p class="piece-note">
+              Forms grouped to slow the eye — surface, silhouette, and the space
+              between.
+            </p>
+          </div>
+          <span class="piece-progress" aria-hidden="true">08</span>
+        </section>
+      </div>
 
       <section class="section statement" id="statement">
         <div class="section-inner">
           <div>
             <p class="section-label reveal">Artist statement</p>
             <p class="statement-quote reveal reveal-delay-1">
-              Soft, inviting, generous, and strong — forms that feel as if they are inhaling.
+              Soft, inviting, generous, and strong — forms that feel as if they
+              are inhaling.
             </p>
           </div>
           <div class="statement-body reveal reveal-delay-2">
@@ -317,22 +348,6 @@
         <p>&copy; <span id="year"></span> Ray Brown</p>
       </div>
     </footer>
-
-    <div class="lightbox" aria-hidden="true" role="dialog" aria-label="Artwork viewer">
-      <button class="lightbox-close" type="button" aria-label="Close">
-        &times;
-      </button>
-      <button class="lightbox-prev" type="button" aria-label="Previous artwork">
-        &#8592;
-      </button>
-      <figure class="lightbox-figure">
-        <img class="lightbox-image" src="" alt="" />
-        <figcaption class="lightbox-caption"></figcaption>
-      </figure>
-      <button class="lightbox-next" type="button" aria-label="Next artwork">
-        &#8594;
-      </button>
-    </div>
 
     <script>
       document.getElementById("year").textContent = String(new Date().getFullYear());
