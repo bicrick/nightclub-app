@@ -5,6 +5,7 @@
   --color-charcoal: #161615;
   --color-ink: #1c1b19;
   --color-muted: #7a756e;
+  --color-accent: #a56b45;
 
   --font-sans: "Instrument Sans", "Helvetica Neue", sans-serif;
 
@@ -24,16 +25,16 @@
   --text-base: 0.9375rem;
   --text-md: 1.0625rem;
   --text-lg: 1.25rem;
-  --text-xl: clamp(1.5rem, 3.5vw, 2rem);
+  --text-xl: clamp(1.35rem, 2.8vw, 1.75rem);
   --text-2xl: clamp(1.75rem, 5vw, 2.75rem);
-  --text-hero: clamp(2.5rem, 9vw, 5.5rem);
+  --text-hero: clamp(2.5rem, 9vw, 5.25rem);
 
   --nav-height: 3.25rem;
   --content-max: 72rem;
   --measure: 34rem;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --duration: 900ms;
-  --duration-slow: 1600ms;
+  --duration: 800ms;
+  --duration-slow: 1400ms;
 }
 
 @media (min-width: 768px) {
