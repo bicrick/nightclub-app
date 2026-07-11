@@ -1,14 +1,9 @@
-function getChapters() {
-  return Array.from(document.querySelectorAll(".chapter"));
-}
-
 function prefersReducedMotion() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
 export function initPieces() {
   const pieces = document.querySelectorAll(".piece");
-  const chapters = getChapters();
   const rail = document.querySelector(".chapter-rail");
   const fill = document.querySelector(".chapter-rail-fill");
   const meta = document.querySelector(".chapter-rail-meta");
@@ -26,14 +21,12 @@ export function initPieces() {
           }
         });
       },
-      { threshold: 0.4 }
+      { threshold: 0.35, rootMargin: "0px 0px -10% 0px" }
     );
     pieces.forEach((piece) => observer.observe(piece));
   }
 
-  const pieceChapters = chapters.filter((chapter) =>
-    chapter.classList.contains("piece")
-  );
+  const pieceChapters = Array.from(pieces);
 
   const syncRail = () => {
     if (!rail || !fill || !meta || !pieceChapters.length) return;
@@ -72,45 +65,7 @@ export function initPieces() {
     meta.classList.add("is-active");
   };
 
-  const goToChapter = (index) => {
-    const target = chapters[index];
-    if (!target) return;
-    target.scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth" });
-  };
-
-  const currentChapterIndex = () => {
-    let active = 0;
-    let best = -Infinity;
-    chapters.forEach((chapter, index) => {
-      const rect = chapter.getBoundingClientRect();
-      const score = -Math.abs(rect.top);
-      if (score > best) {
-        best = score;
-        active = index;
-      }
-    });
-    return active;
-  };
-
   window.addEventListener("scroll", syncRail, { passive: true });
   window.addEventListener("resize", syncRail);
   syncRail();
-
-  window.addEventListener("keydown", (event) => {
-    const tag = event.target?.tagName;
-    if (tag === "INPUT" || tag === "TEXTAREA" || event.target?.isContentEditable) {
-      return;
-    }
-
-    const key = event.key.toLowerCase();
-    const nextKeys = ["arrowdown", "pagedown", "j"];
-    const prevKeys = ["arrowup", "pageup", "k"];
-
-    if (![...nextKeys, ...prevKeys].includes(key)) return;
-
-    event.preventDefault();
-    const index = currentChapterIndex();
-    if (nextKeys.includes(key)) goToChapter(Math.min(index + 1, chapters.length - 1));
-    if (prevKeys.includes(key)) goToChapter(Math.max(index - 1, 0));
-  });
 }
