@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/pieces.css" />
     <link rel="stylesheet" href="css/sections.css" />
+    <link rel="stylesheet" href="css/instagram.css" />
     <link rel="stylesheet" href="css/motion.css" />
   </head>
   <body>
@@ -38,6 +39,7 @@
         <a href="#work">Work</a>
         <a href="#statement">Statement</a>
         <a href="#about">About</a>
+        <a href="#instagram">Instagram</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -49,7 +51,7 @@
 
     <main id="top">
       <section class="hero chapter" aria-label="Introduction">
-        <div class="hero-stage" aria-hidden="true">
+        <div class="hero-media" aria-hidden="true">
           <img
             src="assets/photos/IMG_3323.jpg"
             alt=""
@@ -58,6 +60,7 @@
             fetchpriority="high"
           />
         </div>
+        <div class="hero-overlay" aria-hidden="true"></div>
         <div class="hero-content">
           <p class="hero-kicker">Oxford, Mississippi</p>
           <h1 class="hero-title">Ray Brown Ceramics</h1>
@@ -85,9 +88,9 @@
           class="piece chapter"
           aria-label="Flower vessel"
           data-chapter-label="Flower vessel"
-          data-side="start"
+          data-focus="upper"
         >
-          <div class="piece-stage">
+          <div class="piece-media">
             <img
               src="assets/photos/IMG_3323.jpg"
               alt="Sculptural ceramic bowl with wire loop and graphic surface marks"
@@ -96,13 +99,11 @@
               loading="lazy"
             />
           </div>
+          <div class="piece-shade" aria-hidden="true"></div>
           <div class="piece-meta">
             <span class="piece-index">01 / 08</span>
             <h3 class="piece-title">Flower vessel</h3>
-            <p class="piece-note">
-              Pressurized volume and a quiet graphic mark — made to hold stillness
-              as much as stems.
-            </p>
+            <p class="piece-note">Pressurized volume. Quiet graphic mark.</p>
           </div>
         </section>
 
@@ -110,9 +111,9 @@
           class="piece chapter"
           aria-label="Vessel group"
           data-chapter-label="Vessel group"
-          data-side="end"
+          data-focus="center"
         >
-          <div class="piece-stage">
+          <div class="piece-media">
             <img
               src="assets/photos/RayBrownOct23-115.jpg"
               alt="Three tall ceramic vessels with graphic marks and textured bases"
@@ -121,13 +122,11 @@
               loading="lazy"
             />
           </div>
+          <div class="piece-shade" aria-hidden="true"></div>
           <div class="piece-meta">
             <span class="piece-index">02 / 08</span>
             <h3 class="piece-title">Vessel group</h3>
-            <p class="piece-note">
-              Soft indentations, cream glaze, and bases that feel dug from
-              sediment — a conversation in proportion.
-            </p>
+            <p class="piece-note">A conversation in proportion.</p>
           </div>
         </section>
 
@@ -135,9 +134,9 @@
           class="piece chapter"
           aria-label="Goblets"
           data-chapter-label="Goblets"
-          data-side="start"
+          data-focus="center"
         >
-          <div class="piece-stage">
+          <div class="piece-media">
             <img
               src="assets/photos/MargaritaInvitational2024-12.jpg"
               alt="Pair of ceramic goblets with geometric stems and gold accents"
@@ -146,13 +145,11 @@
               loading="lazy"
             />
           </div>
+          <div class="piece-shade" aria-hidden="true"></div>
           <div class="piece-meta">
             <span class="piece-index">03 / 08</span>
             <h3 class="piece-title">Goblets</h3>
-            <p class="piece-note">
-              Faceted stems and fluid washes — architecture meeting the hand at
-              drinking height.
-            </p>
+            <p class="piece-note">Faceted stems. Fluid washes.</p>
           </div>
         </section>
 
@@ -160,9 +157,9 @@
           class="piece chapter"
           aria-label="Mug"
           data-chapter-label="Mug"
-          data-side="end"
+          data-focus="center"
         >
-          <div class="piece-stage">
+          <div class="piece-media">
             <img
               src="assets/photos/RayBrownOct23-1.jpg"
               alt="Ceramic mug with teal washes, gold square, and textured foot"
@@ -171,13 +168,11 @@
               loading="lazy"
             />
           </div>
+          <div class="piece-shade" aria-hidden="true"></div>
           <div class="piece-meta">
             <span class="piece-index">04 / 08</span>
             <h3 class="piece-title">Mug</h3>
-            <p class="piece-note">
-              Daily use as ritual — gold square, cobalt interior, a foot that
-              catches color like tide.
-            </p>
+            <p class="piece-note">Daily use as ritual.</p>
           </div>
         </section>
 
@@ -212,9 +207,9 @@
           class="piece chapter"
           aria-label="Lidded jar"
           data-chapter-label="Lidded jar"
-          data-side="start"
+          data-focus="center"
         >
-          <div class="piece-stage">
+          <div class="piece-media">
             <img
               src="assets/photos/RayBrownOct23-78.jpg"
               alt="Lidded ceramic jar with mustard and teal surface decoration"
@@ -223,13 +218,11 @@
               loading="lazy"
             />
           </div>
+          <div class="piece-shade" aria-hidden="true"></div>
           <div class="piece-meta">
             <span class="piece-index">05 / 08</span>
             <h3 class="piece-title">Lidded jar</h3>
-            <p class="piece-note">
-              Mustard, teal, and hard black geometry — containment as a kind of
-              pause.
-            </p>
+            <p class="piece-note">Containment as a kind of pause.</p>
           </div>
         </section>
 
@@ -237,9 +230,9 @@
           class="piece chapter"
           aria-label="Studio form"
           data-chapter-label="Studio form"
-          data-side="end"
+          data-focus="center"
         >
-          <div class="piece-stage">
+          <div class="piece-media">
             <img
               src="assets/photos/RayBrownOct23-62.jpg"
               alt="Ceramic vessel photographed in studio lighting"
@@ -248,13 +241,11 @@
               loading="lazy"
             />
           </div>
+          <div class="piece-shade" aria-hidden="true"></div>
           <div class="piece-meta">
             <span class="piece-index">06 / 08</span>
             <h3 class="piece-title">Studio form</h3>
-            <p class="piece-note">
-              Confidence of line held in soft clay — the inhale before the glaze
-              settles.
-            </p>
+            <p class="piece-note">Confidence of line held in soft clay.</p>
           </div>
         </section>
 
@@ -262,9 +253,9 @@
           class="piece chapter"
           aria-label="Chalices"
           data-chapter-label="Chalices"
-          data-side="start"
+          data-focus="center"
         >
-          <div class="piece-stage">
+          <div class="piece-media">
             <img
               src="assets/photos/sxpf/sxpf-gallery-2.webp"
               alt="Pair of sculptural ceramic chalices against a white ground"
@@ -273,13 +264,11 @@
               loading="lazy"
             />
           </div>
+          <div class="piece-shade" aria-hidden="true"></div>
           <div class="piece-meta">
             <span class="piece-index">07 / 08</span>
             <h3 class="piece-title">Chalices</h3>
-            <p class="piece-note">
-              Cubed stems and open bowls — streamlining-era proportion translated
-              into clay.
-            </p>
+            <p class="piece-note">Streamlining-era proportion in clay.</p>
           </div>
         </section>
 
@@ -287,9 +276,9 @@
           class="piece chapter"
           aria-label="Assemblage"
           data-chapter-label="Assemblage"
-          data-side="end"
+          data-focus="center"
         >
-          <div class="piece-stage">
+          <div class="piece-media">
             <img
               src="assets/photos/RayBrownOct23-118.jpg"
               alt="Ceramic work with confident line and energetic surface decoration"
@@ -298,13 +287,11 @@
               loading="lazy"
             />
           </div>
+          <div class="piece-shade" aria-hidden="true"></div>
           <div class="piece-meta">
             <span class="piece-index">08 / 08</span>
             <h3 class="piece-title">Assemblage</h3>
-            <p class="piece-note">
-              Forms grouped to slow the eye — surface, silhouette, and the space
-              between.
-            </p>
+            <p class="piece-note">Surface, silhouette, and the space between.</p>
           </div>
         </section>
       </div>
@@ -337,6 +324,52 @@
               <li>MFA Ceramics, West Virginia University</li>
               <li>BFA Ceramics with Honors, University of Mississippi</li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section instagram" id="instagram">
+        <div class="section-inner">
+          <div class="instagram-header">
+            <div>
+              <p class="section-label reveal">On Instagram</p>
+              <h2 class="section-title reveal reveal-delay-1">Recent reels</h2>
+              <p class="reveal reveal-delay-1">
+                Process and finished forms from the studio — watch on Instagram for more.
+              </p>
+            </div>
+            <a
+              class="instagram-profile reveal reveal-delay-2"
+              href="https://www.instagram.com/rlbrown1995/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @rlbrown1995
+            </a>
+          </div>
+          <div class="instagram-embeds reveal reveal-delay-2">
+            <div class="instagram-embed">
+              <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/reel/DZqaTfStX5H/"
+                data-instgrm-version="14"
+              >
+                <a href="https://www.instagram.com/reel/DZqaTfStX5H/"
+                  >View this reel on Instagram</a
+                >
+              </blockquote>
+            </div>
+            <div class="instagram-embed">
+              <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/reel/DWwMgm5jCyJ/"
+                data-instgrm-version="14"
+              >
+                <a href="https://www.instagram.com/reel/DWwMgm5jCyJ/"
+                  >View this reel on Instagram</a
+                >
+              </blockquote>
+            </div>
           </div>
         </div>
       </section>
@@ -381,5 +414,6 @@
       document.getElementById("year").textContent = String(new Date().getFullYear());
     </script>
     <script type="module" src="js/main.js"></script>
+    <script async src="https://www.instagram.com/embed.js"></script>
   </body>
 </html>
