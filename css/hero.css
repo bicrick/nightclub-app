@@ -1,49 +1,36 @@
 .hero {
   position: relative;
-  min-height: 100svh;
-  min-height: 100dvh;
   display: grid;
-  align-items: end;
-  padding: calc(var(--nav-height) + var(--space-6)) var(--space-4) var(--space-7);
+  grid-template-rows: 1fr auto;
   color: var(--color-cream);
   overflow: hidden;
   background: var(--color-charcoal);
 }
 
-.hero-media {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+.hero-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52svh;
+  padding: calc(var(--nav-height) + var(--space-5)) var(--space-4) var(--space-3);
 }
 
-.hero-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 42%;
-  transform: scale(1.06);
+.hero-stage img {
+  width: auto;
+  height: auto;
+  max-width: min(100%, 28rem);
+  max-height: min(48svh, 28rem);
+  object-fit: contain;
   opacity: 0;
-  animation: hero-in 2.2s var(--ease-out) forwards;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      to top,
-      rgba(22, 22, 21, 0.78) 0%,
-      rgba(22, 22, 21, 0.28) 48%,
-      rgba(22, 22, 21, 0.18) 100%
-    );
-  z-index: 1;
-  pointer-events: none;
+  transform: translateY(0.85rem) scale(0.985);
+  animation: rise-in 1.4s var(--ease-out) 0.15s forwards;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 36rem;
+  padding: var(--space-5) var(--space-4) var(--space-7);
+  max-width: 40rem;
 }
 
 .hero-kicker {
@@ -141,23 +128,36 @@
   color: var(--color-cream);
 }
 
-@keyframes hero-in {
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 @keyframes rise-in {
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
 @media (min-width: 768px) {
   .hero {
-    padding: calc(var(--nav-height) + var(--space-8)) var(--space-7) var(--space-9);
+    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-rows: none;
+    align-items: stretch;
+  }
+
+  .hero-stage {
+    min-height: 100svh;
+    min-height: 100dvh;
+    padding: calc(var(--nav-height) + var(--space-6)) var(--space-6);
+  }
+
+  .hero-stage img {
+    max-width: min(100%, 36rem);
+    max-height: min(78svh, 36rem);
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--space-9) var(--space-7) var(--space-9);
   }
 
   .hero-scroll {
@@ -167,7 +167,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-media img,
+  .hero-stage img,
   .hero-kicker,
   .hero-title,
   .hero-lede,

@@ -42,9 +42,14 @@
       </nav>
     </header>
 
+    <div class="chapter-rail" aria-hidden="true">
+      <div class="chapter-rail-fill"></div>
+    </div>
+    <div class="chapter-rail-meta" aria-hidden="true"></div>
+
     <main id="top">
-      <section class="hero" aria-label="Introduction">
-        <div class="hero-media" aria-hidden="true">
+      <section class="hero chapter" aria-label="Introduction">
+        <div class="hero-stage" aria-hidden="true">
           <img
             src="assets/photos/IMG_3323.jpg"
             alt=""
@@ -53,7 +58,6 @@
             fetchpriority="high"
           />
         </div>
-        <div class="hero-overlay" aria-hidden="true"></div>
         <div class="hero-content">
           <p class="hero-kicker">Oxford, Mississippi</p>
           <h1 class="hero-title">Ray Brown Ceramics</h1>
@@ -69,7 +73,7 @@
         <a class="hero-scroll" href="#work">Scroll</a>
       </section>
 
-      <section class="section work-intro" id="work">
+      <section class="section work-intro chapter" id="work">
         <div class="section-inner">
           <p class="section-label reveal">Selected work</p>
           <h2 class="section-title reveal reveal-delay-1">One form at a time</h2>
@@ -77,8 +81,13 @@
       </section>
 
       <div class="pieces-stream">
-        <section class="piece" aria-label="Flower vessel">
-          <div class="piece-media">
+        <section
+          class="piece chapter"
+          aria-label="Flower vessel"
+          data-chapter-label="Flower vessel"
+          data-side="start"
+        >
+          <div class="piece-stage">
             <img
               src="assets/photos/IMG_3323.jpg"
               alt="Sculptural ceramic bowl with wire loop and graphic surface marks"
@@ -86,9 +95,8 @@
               height="1907"
               loading="lazy"
             />
-            <div class="piece-shade" aria-hidden="true"></div>
           </div>
-          <div class="piece-content">
+          <div class="piece-meta">
             <span class="piece-index">01 / 08</span>
             <h3 class="piece-title">Flower vessel</h3>
             <p class="piece-note">
@@ -96,11 +104,15 @@
               as much as stems.
             </p>
           </div>
-          <span class="piece-progress" aria-hidden="true">01</span>
         </section>
 
-        <section class="piece" aria-label="Vessel group">
-          <div class="piece-media">
+        <section
+          class="piece chapter"
+          aria-label="Vessel group"
+          data-chapter-label="Vessel group"
+          data-side="end"
+        >
+          <div class="piece-stage">
             <img
               src="assets/photos/RayBrownOct23-115.jpg"
               alt="Three tall ceramic vessels with graphic marks and textured bases"
@@ -108,9 +120,8 @@
               height="800"
               loading="lazy"
             />
-            <div class="piece-shade" aria-hidden="true"></div>
           </div>
-          <div class="piece-content">
+          <div class="piece-meta">
             <span class="piece-index">02 / 08</span>
             <h3 class="piece-title">Vessel group</h3>
             <p class="piece-note">
@@ -118,11 +129,15 @@
               sediment — a conversation in proportion.
             </p>
           </div>
-          <span class="piece-progress" aria-hidden="true">02</span>
         </section>
 
-        <section class="piece" aria-label="Goblets">
-          <div class="piece-media">
+        <section
+          class="piece chapter"
+          aria-label="Goblets"
+          data-chapter-label="Goblets"
+          data-side="start"
+        >
+          <div class="piece-stage">
             <img
               src="assets/photos/MargaritaInvitational2024-12.jpg"
               alt="Pair of ceramic goblets with geometric stems and gold accents"
@@ -130,9 +145,8 @@
               height="800"
               loading="lazy"
             />
-            <div class="piece-shade" aria-hidden="true"></div>
           </div>
-          <div class="piece-content">
+          <div class="piece-meta">
             <span class="piece-index">03 / 08</span>
             <h3 class="piece-title">Goblets</h3>
             <p class="piece-note">
@@ -140,11 +154,15 @@
               drinking height.
             </p>
           </div>
-          <span class="piece-progress" aria-hidden="true">03</span>
         </section>
 
-        <section class="piece" aria-label="Mug">
-          <div class="piece-media">
+        <section
+          class="piece chapter"
+          aria-label="Mug"
+          data-chapter-label="Mug"
+          data-side="end"
+        >
+          <div class="piece-stage">
             <img
               src="assets/photos/RayBrownOct23-1.jpg"
               alt="Ceramic mug with teal washes, gold square, and textured foot"
@@ -152,9 +170,8 @@
               height="800"
               loading="lazy"
             />
-            <div class="piece-shade" aria-hidden="true"></div>
           </div>
-          <div class="piece-content">
+          <div class="piece-meta">
             <span class="piece-index">04 / 08</span>
             <h3 class="piece-title">Mug</h3>
             <p class="piece-note">
@@ -162,11 +179,42 @@
               catches color like tide.
             </p>
           </div>
-          <span class="piece-progress" aria-hidden="true">04</span>
         </section>
 
-        <section class="piece" aria-label="Lidded jar">
-          <div class="piece-media">
+        <section class="section statement chapter is-interlude" id="statement">
+          <div class="section-inner">
+            <div>
+              <p class="section-label reveal">Artist statement</p>
+              <p class="statement-quote reveal reveal-delay-1">
+                Soft, inviting, generous, and strong — forms that feel as if they
+                are inhaling.
+              </p>
+            </div>
+            <div class="statement-body reveal reveal-delay-2">
+              <p>
+                I make utilitarian pottery with the intent to provide the user with
+                an entrance into a memorable and contemplative experience. I wish
+                to achieve cohesive forms that capture a confidence of line, with
+                supporting crisp and energetic surface decoration.
+              </p>
+              <p>
+                Both in surface and form, I strive for a captured, pressurized
+                volume within my work. I am interested in translating curvilinear
+                patterns and line work into three-dimensional forms inspired by
+                architecture and the Streamlining Era — jars, flower vases, and
+                teapots that prompt the user to slow down.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="piece chapter"
+          aria-label="Lidded jar"
+          data-chapter-label="Lidded jar"
+          data-side="start"
+        >
+          <div class="piece-stage">
             <img
               src="assets/photos/RayBrownOct23-78.jpg"
               alt="Lidded ceramic jar with mustard and teal surface decoration"
@@ -174,9 +222,8 @@
               height="800"
               loading="lazy"
             />
-            <div class="piece-shade" aria-hidden="true"></div>
           </div>
-          <div class="piece-content">
+          <div class="piece-meta">
             <span class="piece-index">05 / 08</span>
             <h3 class="piece-title">Lidded jar</h3>
             <p class="piece-note">
@@ -184,11 +231,15 @@
               pause.
             </p>
           </div>
-          <span class="piece-progress" aria-hidden="true">05</span>
         </section>
 
-        <section class="piece" aria-label="Studio form">
-          <div class="piece-media">
+        <section
+          class="piece chapter"
+          aria-label="Studio form"
+          data-chapter-label="Studio form"
+          data-side="end"
+        >
+          <div class="piece-stage">
             <img
               src="assets/photos/RayBrownOct23-62.jpg"
               alt="Ceramic vessel photographed in studio lighting"
@@ -196,9 +247,8 @@
               height="800"
               loading="lazy"
             />
-            <div class="piece-shade" aria-hidden="true"></div>
           </div>
-          <div class="piece-content">
+          <div class="piece-meta">
             <span class="piece-index">06 / 08</span>
             <h3 class="piece-title">Studio form</h3>
             <p class="piece-note">
@@ -206,11 +256,15 @@
               settles.
             </p>
           </div>
-          <span class="piece-progress" aria-hidden="true">06</span>
         </section>
 
-        <section class="piece" aria-label="Chalices">
-          <div class="piece-media">
+        <section
+          class="piece chapter"
+          aria-label="Chalices"
+          data-chapter-label="Chalices"
+          data-side="start"
+        >
+          <div class="piece-stage">
             <img
               src="assets/photos/sxpf/sxpf-gallery-2.webp"
               alt="Pair of sculptural ceramic chalices against a white ground"
@@ -218,9 +272,8 @@
               height="1000"
               loading="lazy"
             />
-            <div class="piece-shade" aria-hidden="true"></div>
           </div>
-          <div class="piece-content">
+          <div class="piece-meta">
             <span class="piece-index">07 / 08</span>
             <h3 class="piece-title">Chalices</h3>
             <p class="piece-note">
@@ -228,11 +281,15 @@
               into clay.
             </p>
           </div>
-          <span class="piece-progress" aria-hidden="true">07</span>
         </section>
 
-        <section class="piece" aria-label="Assemblage">
-          <div class="piece-media">
+        <section
+          class="piece chapter"
+          aria-label="Assemblage"
+          data-chapter-label="Assemblage"
+          data-side="end"
+        >
+          <div class="piece-stage">
             <img
               src="assets/photos/RayBrownOct23-118.jpg"
               alt="Ceramic work with confident line and energetic surface decoration"
@@ -240,9 +297,8 @@
               height="800"
               loading="lazy"
             />
-            <div class="piece-shade" aria-hidden="true"></div>
           </div>
-          <div class="piece-content">
+          <div class="piece-meta">
             <span class="piece-index">08 / 08</span>
             <h3 class="piece-title">Assemblage</h3>
             <p class="piece-note">
@@ -250,36 +306,8 @@
               between.
             </p>
           </div>
-          <span class="piece-progress" aria-hidden="true">08</span>
         </section>
       </div>
-
-      <section class="section statement" id="statement">
-        <div class="section-inner">
-          <div>
-            <p class="section-label reveal">Artist statement</p>
-            <p class="statement-quote reveal reveal-delay-1">
-              Soft, inviting, generous, and strong — forms that feel as if they
-              are inhaling.
-            </p>
-          </div>
-          <div class="statement-body reveal reveal-delay-2">
-            <p>
-              I make utilitarian pottery with the intent to provide the user with
-              an entrance into a memorable and contemplative experience. I wish
-              to achieve cohesive forms that capture a confidence of line, with
-              supporting crisp and energetic surface decoration.
-            </p>
-            <p>
-              Both in surface and form, I strive for a captured, pressurized
-              volume within my work. I am interested in translating curvilinear
-              patterns and line work into three-dimensional forms inspired by
-              architecture and the Streamlining Era — jars, flower vases, and
-              teapots that prompt the user to slow down.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <section class="section about" id="about">
         <div class="section-inner">
