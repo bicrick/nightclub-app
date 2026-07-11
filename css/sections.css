@@ -1,6 +1,13 @@
 .statement {
   background: var(--color-charcoal);
   color: var(--color-cream);
+  display: flex;
+  align-items: center;
+  padding-block: calc(var(--nav-height) + var(--space-8)) var(--space-8);
+}
+
+.statement.is-interlude .section-inner {
+  width: 100%;
 }
 
 .statement .section-label {
