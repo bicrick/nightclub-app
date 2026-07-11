@@ -35,7 +35,8 @@
 
 .instagram-profile:hover {
   opacity: 1;
-  border-bottom-color: var(--color-ink);
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
 }
 
 .instagram-embeds {
