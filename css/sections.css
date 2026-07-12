@@ -129,6 +129,11 @@
   border-bottom-color: var(--color-accent);
 }
 
+.contact-link--static:hover {
+  color: inherit;
+  border-bottom-color: var(--color-stone);
+}
+
 .contact-link span {
   display: block;
   font-size: var(--text-xs);
